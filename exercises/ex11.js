@@ -26,27 +26,33 @@ Implement the functions one by one. The example inputs and outputs below will he
 
 // Use the value below whenever you need the value of Pi
 const PI = 3.14159 ;
+let volumeSphere;
+let volumeCone;
+let volumePrism;
 
 const sphereVolume = function (radius) {
-  // Code here!
+ let volumeSphere=(4/3)*PI*(radius**3)
+ return volumeSphere
 }
 
 console.log(4186 < sphereVolume(10) && sphereVolume(10) < 4189); //true
 
 const coneVolume = function (radius, height) {
-  // And here!
+  let volumeCone=(1/3)*height*PI*(radius**2)
+  return volumeCone
 }
 
 console.log(45 < coneVolume(3, 5) && coneVolume(3, 5) < 49); //true
 
 const prismVolume = function (height, width, depth) {
-  // Probably here too!
+  let volumePrism=height*width*depth
+  return volumePrism
 }
 
 console.log(prismVolume(3, 4, 5) === 60); //true
 
 const totalVolume = function (solids) {
-  // Code here? Yup!
+   
 }
 
 const largeSphere = {

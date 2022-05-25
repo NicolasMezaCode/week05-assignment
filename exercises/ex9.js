@@ -8,9 +8,17 @@ Instruction
 Create a function named camelCase that will convert a string to camel case, and return the result.
 */
 
-Input
-const camelCase = function(input) {
-  // Your code here
+
+const camelCase=function(input) {
+  let phrase=input.split("");
+  phrase[0]=phrase[0].toLowerCase();
+  for(i=0;i<phrase.length;i++) {
+    if(phrase[i] == " "){
+      phrase[i+1] = phrase[i+1].toUpperCase();
+      phrase[i] = phrase[i].replace(" ", "");
+    }
+  }
+   console.log(phrase.join(""))
 };
 
 console.log(camelCase("this is a string")); // thisIsAString
